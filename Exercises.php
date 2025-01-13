@@ -1,5 +1,5 @@
 Exercises
-Write an anonymous function that filters an array of numbers to return only the odd numbers.
+1. Write an anonymous function that filters an array of numbers to return only the odd numbers.
 
 <?php
 
@@ -14,7 +14,7 @@ Write an anonymous function that filters an array of numbers to return only the 
 
 ?>
 
-Create a higher-order function that returns an anonymous function
+2. Create a higher-order function that returns an anonymous function
 to calculate the power of a number.
 
 <?php
@@ -37,7 +37,7 @@ echo "<br>";
 ?>
 
 
-Use an anonymous function to sort an array of strings by their lengths.
+3. Use an anonymous function to sort an array of strings by their lengths.
 <?php
 
 $people2 = [
@@ -55,3 +55,25 @@ print_r($people2);
 echo "<br>";
 
 ?>
+
+4. Create a Person class with properties for name and age, and a method to display the person's information.
+
+<?php
+
+?>
+
+5. Create an array of your favorite movies and display them.
+
+<?php
+
+?>
+
+6. Write a class hierarchy where a Dog class inherits from an Animal class and overrides the speak method.
+<?php
+
+?>
+
+
+Create a script that calculates the average of an array of numbers.
+Create a form that accepts a user's name and displays a greeting.
+Build a form to accept two numbers and perform basic arithmetic operations.
