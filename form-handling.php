@@ -84,7 +84,7 @@ Sanitizing and validating input ensures data integrity and security.
 Sanitization removes unwanted or dangerous data.
 
 <?php
-$name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+$name = strip_tags($_POST['name']);
 $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 ?>
 
@@ -104,7 +104,7 @@ Combining Sanitization and Validation
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Sanitize input
-    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    $name = strip_tags($_POST['name']);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
     // Validate input
@@ -125,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $errors = [];
 
     // Sanitize input
-    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    $name = strip_tags($_POST['name']);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
     // Validate input
@@ -138,10 +138,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if (empty($errors)) {
         echo "Form submitted successfully!<br>";
-        echo "Name: $name<br>Email: $email";
+        echo "Name: " . htmlspecialchars($name) . "<br>";
+        echo "Email: " . htmlspecialchars($email) . "<br>";
     } else {
         foreach ($errors as $field => $error) {
-            echo ucfirst($field) . ": $error<br>";
+            echo ucfirst($field) . ": " . htmlspecialchars($error) . "<br>";
+            // ucfirst takes a string as an argument and returns the string with the first character
+            // in Upper Case and all other characters remain unchanged
         }
     }
 }

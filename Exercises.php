@@ -74,6 +74,6 @@ echo "<br>";
 ?>
 
 
-Create a script that calculates the average of an array of numbers.
-Create a form that accepts a user's name and displays a greeting.
-Build a form to accept two numbers and perform basic arithmetic operations.
+7. Create a script that calculates the average of an array of numbers.
+8. Create a form that accepts a user's name and displays a greeting.
+9. Build a form to accept two numbers and perform basic arithmetic operations.
